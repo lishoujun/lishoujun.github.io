@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="青金中心常用业务系统及外部工具">
+  <meta name="author" content="lsjun@aliyun.com">
+  <title>青金中心常用业务系统及外部工具</title>
+
+ 
+  <style>
+  body {
+   /* width: 80em;*/
+    margin: 0 auto;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+  }
+    p span{
+      display: inline-block;
+      width: 100px;
+    }
+
+
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+  <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  
+  <style type="text/css">
+  a {padding:2px 4px 3px 4px;}
+  </style>
+</head>
+<body>
+  <div id="link" class="container" style="margin-top:10px">
+    <p id="testEnv">
+      <span>test环境</span>
+      <a class="btn btn-success" target="_blank" href="http://test.ptoms.qdfae.com/">交易所</a>
+      <a class="btn btn-success" target="_blank"href="http://test.jgoms.qdfae.com/">会员</a>
+      <a class="btn btn-success" target="_blank" href="http://test.ats.qdfae.com/">客户</a>
+    </p>
+    <p id="qaEnv">
+      <span> QA 1 环境</span>
+      <a class="btn btn-success" target="_blank" href="http://qa.ptoms.qdfae.com/">交易所</a>
+      <a class="btn btn-success" target="_blank"href="http://qa.jgoms.qdfae.com/">会员</a>
+      <a class="btn btn-success" target="_blank" href="http://qa.ats.qdfae.com/">客户</a>
+    </p>
+	<p id="qa2Env">
+      <span>QA 2 环境</span>
+      <a class="btn btn-success" target="_blank" href="http://qa2.ptoms.qdfae.com/">交易所</a>
+      <a class="btn btn-success" target="_blank"href="http://qa2.jgoms.qdfae.com/">会员</a>
+      <a class="btn btn-success" target="_blank" href="http://qa2.ats.qdfae.com/">客户</a>
+    </p>
+    <p id="yzEnv">
+      <span>验证环境</span>
+      <a class="btn btn-success" target="_blank" href="http://yz.ptoms.qdfae.com/">交易所</a>
+      <a class="btn btn-success" target="_blank"href="http://yz.jgoms.qdfae.com/">会员</a>
+      <a class="btn btn-success" target="_blank" href="http://yz.ats.qdfae.com/">客户</a>
+    </p>
+    <p id="proEnv">
+      <span>生产环境</span>
+      <a class="btn btn-success" target="_blank" href="https://ptoms.qdfae.com/">交易所</a>
+      <a class="btn btn-success" target="_blank"href="https://jgoms.qdfae.com/">会员</a>
+      <a class="btn btn-success" target="_blank" href="https://ats.qdfae.com/">客户</a>
+    </p>
+    <p id="innerTools">
+      <span>内部工具</span>
+      <a class="btn btn-success" target="_blank" href="http://wiki.cfaoe.com/">wiki</a>
+      <a class="btn btn-success" target="_blank" href="http://oa.cfaoe.com/">OA</a>
+      <a class="btn btn-success" target="_blank" href="http://172.16.18.3:81">SQLPad</a>
+      <a class="btn btn-success" target="_blank" href="http://172.16.18.9:8000">性能测试</a>
+      <a class="btn btn-success" target="_blank" href="http://git.cfaoe.com/">gitlab</a>
+      <a class="btn btn-success" target="_blank" href="http://robotcat.cfaoe.com/">接口自动化</a>
+    </p>
+    <p id="outerTools">
+     <span> 外部工具</span>
+      <a class="btn btn-success" target="_blank" href="https://www.processon.com/">processon</a>
+      <a class="btn btn-success" target="_blank" href="https://www.teambition.com/projects">teambition</a>
+      <a class="btn btn-success" target="_blank" href="https://im.dingtalk.com/">钉钉</a>
+      <a class="btn btn-success" target="_blank" href="http://www.github.com/">github</a>
+      <a class="btn btn-success" target="_blank" href="https://translate.google.cn/#en/zh-CN/">谷歌在线翻译</a>
+      <a class="btn btn-success" target="_blank" href="http://tool.oschina.net/codeformat/json">json格式化</a>
+      <a class="btn btn-success" target="_blank" href="https://share.axure.com">axure</a>
+      <a class="btn btn-success" target="_blank" href="https://yiqixie.com/">一起写</a>
+    </p>
+    <p id="outerTools">
+      <span>外部文档</span>
+      <a class="btn btn-success" target="_blank" href="http://www.bootcss.com/">Bootstrap</a>
+      <a class="btn btn-success" target="_blank" href="http://www.jeasyui.com/documentation/index.php">EasyUI Doc</a>
+      <a class="btn btn-success" target="_blank" href="http://api.jquery.com/">jquery Doc</a>
+      <a class="btn btn-success" target="_blank" href="http://www.open-open.com/lib/view/open1435478114450.html">Atom shortcuts</a>
+      <a class="btn btn-success" target="_blank" href="http://www.blogjava.net/action/articles/17339.html">Eclipse shortcuts</a>
+      <a class="btn btn-success" target="_blank" href="http://www.w3school.com.cn/">w3school</a>
+    </p>
+    <p id="xfae">
+     <span> 西金所</span>
+      <a class="btn btn-success" target="_blank" href="http://qa.ptoms.xfae.com/">交易所</a>
+      <a class="btn btn-success" target="_blank"href="http://qa.jgoms.xfae.com/">会员</a>
+      <a class="btn btn-success" target="_blank" href="http://qa.ats.xfae.com/">客户</a>
+    </p>
+	<p id = "old">
+      <span>旧链接</span>
+		<a class="btn btn-success" target="_blank" href="http://pms.cfaoe.com/">禅道</a>
+		<a class="btn btn-success" target="_blank" href="http://pm.cfaoe.com/">项目管理</a>
+	</p>
+	<p id="grayEnv">
+      <span>灰度环境</span>
+      <a class="btn btn-success" target="_blank" href="http://ptoms.qdfae.com/">交易所</a>
+      <a class="btn btn-success" target="_blank"href="http://gray.jgoms.qdfae.com/">会员</a>
+      <a class="btn btn-success" target="_blank" href="http://ats.qdfae.com/">客户</a>
+    </p>
+    </div>
+   
+  </body>
+  </html>
