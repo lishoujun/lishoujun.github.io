@@ -1,0 +1,1 @@
+- 201810 contribute to fdroid app 2048-android https://github.com/uberspot/2048-android
