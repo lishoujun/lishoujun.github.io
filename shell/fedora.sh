@@ -9,7 +9,8 @@ dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$
 dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
 dnf update -y
-dnf install ffmpeg fish firefox git gnome-tweaks htop liveusb-creator qbittorrent vim vlc vsftpd shadowsocks-libev -y
+dnf install ffmpeg fish firefox git gnome-tweaks htop liveusb-creator qbittorrent vim vlc vsftpd shadowsocks-libev openconnect -y
+# sudo openconnect  vpn.xxx.com -u xiaoming --authgroup=RSA
 systemctl enable shadowsocks-libev-local.service
 
 pip3 install -U pip
