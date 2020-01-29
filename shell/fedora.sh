@@ -8,6 +8,10 @@ dnf copr enable librehat/shadowsocks -y
 dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
 dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 
+# to centos
+# dnf install 'dnf-command(copr)'
+# dnf copr enable librehat/shadowsocks  -y
+
 dnf update -y
 dnf install ffmpeg fish firefox git gnome-tweaks htop liveusb-creator qbittorrent vim vlc vsftpd shadowsocks-libev openconnect -y
 # sudo openconnect  vpn.xxx.com -u xiaoming --authgroup=RSA
