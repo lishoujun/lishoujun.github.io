@@ -13,5 +13,8 @@
 
   [contribute to fdroid app browser](https://github.com/scoute-dich/browser/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Alishoujun)
 
+# software recommend
+- [f-droid](https://github.com/f-droid/fdroidclient)
+
 <script src="https://liberapay.com/lishoujun/widgets/button.js"></script>
 <noscript><a href="https://liberapay.com/lishoujun/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
