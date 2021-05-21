@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Thunderbird
+Version=1.0
+Exec=/opt/apps/net.thunderbird/thunderbird
+Comment=Thunderbird
+Icon=/opt/apps/net.thunderbird/chrome/icons/default/default128.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Network;Email;

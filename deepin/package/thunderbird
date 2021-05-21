@@ -1,8 +1,12 @@
 Package: Thunderbird
 Version: 78.10.2-20210513204504
 Maintainer: lishoujun <lsjun@aliyun.com>
+Section: mail
+Source: https://hg.mozilla.org/comm-central/
+Homepage: https://www.thunderbird.net
 Architecture: amd64
 Priority: optional
+Depends: debianutils (>=1.16), libxext6
 Description: mail/news client with RSS, chat and integrated spam filter support
  mail/news client with RSS, chat and integrated spam filter support
   Thunderbird is an mail client suitable for free distribution. The goal of
@@ -19,16 +23,3 @@ Description: mail/news client with RSS, chat and integrated spam filter support
   .
   The goal of Thunderbird is to produce a cross platform standalone mail
   application using the XUL user interface language.
-
-
-[Desktop Entry]
-Name=Thunderbird
-Version=1.0
-Exec=/opt/apps/net.thunderbird/thunderbird
-Comment=Thunderbird
-Icon=/opt/apps/net.thunderbird/chrome/icons/default/default128.png
-Type=Application
-Terminal=false
-StartupNotify=true
-Encoding=UTF-8
-Categories=Network;Email;
