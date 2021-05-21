@@ -1,0 +1,34 @@
+Package: Thunderbird
+Version: 78.10.2-20210513204504
+Maintainer: lishoujun <lsjun@aliyun.com>
+Architecture: amd64
+Priority: optional
+Description: mail/news client with RSS, chat and integrated spam filter support
+ mail/news client with RSS, chat and integrated spam filter support
+  Thunderbird is an mail client suitable for free distribution. The goal of
+  Thunderbird is to produce a cross platform stand-alone mail application using
+  the XUL user interface language.
+  It supports different mail accounts, no matter of the used protocol like
+  POP(s) or IMAP(s), has an integrated learning Spam filter, and offers easy
+  organization of mails with tagging and virtual folders. Also, more features
+  can be added by installing extensions.
+  .
+  Thunderbird also includes an integrated calendar for handling events, events
+  invitations and tasks in multiple calendars. It supports local calendars,
+  CalDAV and plain ics files on CardDAV and WebDAV.
+  .
+  The goal of Thunderbird is to produce a cross platform standalone mail
+  application using the XUL user interface language.
+
+
+[Desktop Entry]
+Name=Thunderbird
+Version=1.0
+Exec=/opt/apps/net.thunderbird/thunderbird
+Comment=Thunderbird
+Icon=/opt/apps/net.thunderbird/chrome/icons/default/default128.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Network;Email;
