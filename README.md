@@ -12,6 +12,7 @@
 - [Feeder](https://gitlab.com/spacecowboy/Feeder) is an Android RSS reader app
 - [Fedilab](https://framagit.org/tom79/fedilab) is a multifunctional Android client to access the distributed Fediverse, consisting of microblogging, photo sharing and video hosting
 - [Tachiyomi](https://github.com/inorichi/tachiyomi) is a free and open source manga reader for Android 5.0 and above.
+- [deepin](https://www.deepin.org/zh/)  base中国的linux发行版
 
 <script src="https://liberapay.com/lishoujun/widgets/button.js"></script>
 <noscript><a href="https://liberapay.com/lishoujun/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
