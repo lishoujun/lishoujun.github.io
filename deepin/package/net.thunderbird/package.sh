@@ -15,10 +15,11 @@ mkdir -p opt/apps
 # 二进制
 cp -r /home/lishoujun/Documents/deb/thunderbird ./opt/apps/net.thunderbird
 # 包信息
-cp -r /home/lishoujun/codes/lishoujun.github.io/deepin/package/net.thunderbird/DEBIAN ./
+cp -r ${currentPath}/deepin/package/net.thunderbird/DEBIAN ./
 # 图标
 mkdir -p usr/share/applications
-cp -r /home/lishoujun/codes/lishoujun.github.io/deepin/package/net.thunderbird/Thunderbird.desktop ./usr/share/applications/
+cp -r ${currentPath}/deepin/package/net.thunderbird/Thunderbird.desktop ./usr/share/applications/
 
 cd ${currentPath}/tmp
+du ${packageName}
 dpkg-deb -bv ${packageName} output/${packageName}_${version}_amd64.deb
