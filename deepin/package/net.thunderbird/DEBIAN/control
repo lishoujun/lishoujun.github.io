@@ -3,7 +3,7 @@ Version: 78.11.0
 Installed-Size: 207804
 Maintainer: lishoujun <lsjun@aliyun.com>
 Section: mail
-Source: https://hg.mozilla.org/comm-central/
+Source: mozilla
 Homepage: https://www.thunderbird.net
 Architecture: amd64
 Priority: optional
