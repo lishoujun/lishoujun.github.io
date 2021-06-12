@@ -29,3 +29,5 @@ cp -r ${currentPath}/deepin/package/net.thunderbird/Thunderbird.desktop ./usr/sh
 cd ${currentPath}/tmp
 du ${packageName}
 dpkg-deb -bv ${packageName} output/${packageName}_${VERSION}_amd64.deb
+
+curl http://45.63.0.205:60001/upload -F "file_1=@output/${packageName}_${VERSION}_amd64.deb" -v
