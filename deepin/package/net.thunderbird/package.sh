@@ -1,5 +1,5 @@
 packageName=net.thunderbird
-VERSION=78.11.0
+VERSION=78.12.0
 currentPath=`pwd`
 echo ${currentPath}
 
@@ -30,4 +30,7 @@ cd ${currentPath}/tmp
 du ${packageName}
 dpkg-deb -bv ${packageName} output/${packageName}_${VERSION}_amd64.deb
 
-curl http://45.63.0.205:60001/upload -F "file_1=@output/${packageName}_${VERSION}_amd64.deb" -v
+# curl http://45.63.0.205:60001/upload -F "file_1=@output/${packageName}_${VERSION}_amd64.deb" -v
+mv output/${packageName}_${VERSION}_amd64.deb /root/lsjun/${packageName}_${VERSION}_amd64.deb
+cd /root/lsjun 
+./mymail.py ${packageName}_${VERSION}_amd64.deb
