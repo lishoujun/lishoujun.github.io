@@ -1,5 +1,5 @@
 packageName=net.thunderbird
-VERSION=78.12.0
+VERSION=78.13.0
 currentPath=`pwd`
 echo ${currentPath}
 
