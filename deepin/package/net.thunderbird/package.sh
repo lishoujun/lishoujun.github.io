@@ -13,8 +13,9 @@ mkdir -p tmp/source
 cd ${currentPath}/tmp/source
 wget https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/${VERSION}/linux-x86_64/zh-CN/thunderbird-${VERSION}.tar.bz2
 
-# cp ~/Downloads/thunderbird-${VERSION}.tar.bz2 ./
 tar xvf thunderbird-${VERSION}.tar.bz2
+file_kb=$((`du --max-depth=0 thunderbird|awk '{print $1}'`))
+echo ${file_kb}
 cd ${currentPath}/tmp/${packageName}
 
 mkdir -p opt/apps
