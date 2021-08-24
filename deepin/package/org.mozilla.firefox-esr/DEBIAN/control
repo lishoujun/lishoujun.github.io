@@ -1,8 +1,9 @@
 Package: org.mozilla.firefox-esr
 Priority: optional
+Installed-Size: @installed_size@
 Section: comm
 Maintainer: xibing,lishoujun <lsjun@aliyun.com>
 Architecture: amd64
-Version: 78.6.0
+Version: @version@
 Depends: deepin-elf-verify (>= 0.0.16.7-1), deepin-elf-verify (>= 0.0.16.7-1)
 Description: 火狐浏览器esr
