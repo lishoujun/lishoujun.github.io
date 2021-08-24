@@ -1,5 +1,5 @@
-packageName=net.thunderbird
-VERSION=78.13.0
+packageName=org.mozilla.firefox-esr
+VERSION=91.0.1esr
 currentPath=`pwd`
 echo ${currentPath}
 
@@ -11,21 +11,21 @@ mkdir -p tmp/source
 
 
 cd ${currentPath}/tmp/source
-wget https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/${VERSION}/linux-x86_64/zh-CN/thunderbird-${VERSION}.tar.bz2
+wget https://download-installer.cdn.mozilla.net/pub/firefox/releases/${VERSION}/linux-x86_64/zh-CN/firefox-${VERSION}.tar.bz2
 
-tar xvf thunderbird-${VERSION}.tar.bz2
-file_kb=$((`du --max-depth=0 thunderbird|awk '{print $1}'`))
+tar xvf firefox-${VERSION}.tar.bz2
+file_kb=$((`du --max-depth=0 firefox|awk '{print $1}'`))
 echo ${file_kb}
 cd ${currentPath}/tmp/${packageName}
 
 mkdir -p opt/apps
 
-cp -r ${currentPath}/tmp/source/thunderbird ./opt/apps/net.thunderbird
+cp -r ${currentPath}/tmp/source/firefox ./opt/apps/org.mozilla.firefox-esr
 # 包信息
-cp -r ${currentPath}/deepin/package/net.thunderbird/DEBIAN ./
+cp -r ${currentPath}/deepin/package/org.mozilla.firefox-esr/DEBIAN ./
 # 图标
 mkdir -p usr/share/applications
-cp -r ${currentPath}/deepin/package/net.thunderbird/Thunderbird.desktop ./usr/share/applications/
+cp -r ${currentPath}/deepin/package/org.mozilla.firefox-esr/Firefox-esr.desktop ./usr/share/applications/
 
 cd ${currentPath}/tmp
 du ${packageName}

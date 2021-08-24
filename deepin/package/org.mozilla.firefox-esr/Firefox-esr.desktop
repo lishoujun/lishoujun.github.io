@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=火狐浏览器企业版
+Version=1.0
+Exec=/opt/apps/org.mozilla.firefox-esr/firefox
+Comment=firefox
+Icon=/opt/apps/org.mozilla.firefox-esr/browser/chrome/icons/default/default128.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Network;WebBrowser;
+X-Deepin-CreatedBy=com.deepin.dde.daemon.Launcher
+X-Deepin-AppID=firefox-esr
