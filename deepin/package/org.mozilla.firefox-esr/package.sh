@@ -23,8 +23,8 @@ mkdir -p opt/apps
 cp -r ${currentPath}/tmp/source/firefox ./opt/apps/${packageName}
 # 包信息
 cp -r ${currentPath}/deepin/package/${packageName}/DEBIAN ./
-sed -i "s/Installed-Size:.*/Installed-Size: ${installed_size}/" control
-sed -i "s/Version:.*/Version: ${VERSION}/" control
+sed -i "s/Installed-Size:.*/Installed-Size: ${installed_size}/" DEBIAN/control
+sed -i "s/Version:.*/Version: ${VERSION}/" DEBIAN/control
 
 # 图标
 mkdir -p usr/share/applications
