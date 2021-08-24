@@ -29,6 +29,7 @@ sed -i "s/Version:.*/Version: ${VERSION}/" control
 # 图标
 mkdir -p usr/share/applications
 cp -r ${currentPath}/deepin/package/${packageName}/Firefox-esr.desktop ./usr/share/applications/
+sed -i "s/Version=.*/Version=${VERSION}/" ./usr/share/applications/*
 
 cd ${currentPath}/tmp
 du ${packageName}
