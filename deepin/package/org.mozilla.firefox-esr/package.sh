@@ -1,5 +1,5 @@
 packageName=org.mozilla.firefox-esr
-VERSION=91.0.1esr
+VERSION=91.1.0esr
 URL=https://download-installer.cdn.mozilla.net/pub/firefox/releases/${VERSION}/linux-x86_64/zh-CN/firefox-${VERSION}.tar.bz2
 
 currentPath=`pwd`
