@@ -1,6 +1,7 @@
 packageName=org.mozilla.firefox-esr
+shortname=firefox
 VERSION=91.1.0esr
-URL=https://download-installer.cdn.mozilla.net/pub/firefox/releases/${VERSION}/linux-x86_64/zh-CN/firefox-${VERSION}.tar.bz2
+URL=https://download-installer.cdn.mozilla.net/pub/${shortname}/releases/${VERSION}/linux-x86_64/zh-CN/${shortname}-${VERSION}.tar.bz2
 
 currentPath=`pwd`
 echo ${currentPath}
@@ -13,14 +14,14 @@ mkdir -p tmp/source
 cd ${currentPath}/tmp/source
 wget ${URL}
 
-tar xvf firefox-${VERSION}.tar.bz2
+tar xvf ${shortname}-${VERSION}.tar.bz2
 installed_size=$((`du --max-depth=0 firefox|awk '{print $1}'`))
 echo ${installed_size}
 cd ${currentPath}/tmp/${packageName}
 
 mkdir -p opt/apps
 
-cp -r ${currentPath}/tmp/source/firefox ./opt/apps/${packageName}
+cp -r ${currentPath}/tmp/source/${shortname} ./opt/apps/${packageName}
 # 包信息
 cp -r ${currentPath}/deepin/package/${packageName}/DEBIAN ./
 sed -i "s/Installed-Size:.*/Installed-Size: ${installed_size}/" DEBIAN/control
