@@ -1,6 +1,6 @@
 Package: net.thunderbird
-Version: 78.13.0
-Installed-Size: 207804
+Version: @version@
+Installed-Size: @installed_size@
 Maintainer: lishoujun <lsjun@aliyun.com>
 Section: mail
 Source: mozilla
