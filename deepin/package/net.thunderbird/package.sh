@@ -29,7 +29,7 @@ sed -i "s/Version:.*/Version: ${VERSION}/" DEBIAN/control
 
 # 图标
 mkdir -p usr/share/applications
-cp -r ${currentPath}/deepin/package/${packageName}/${shortname}.desktop ./usr/share/applications/
+cp -r ${currentPath}/deepin/package/${packageName}/${packageName}.desktop ./usr/share/applications/
 sed -i "s/Version=.*/Version=${VERSION}/" ./usr/share/applications/*
 
 cd ${currentPath}/tmp
