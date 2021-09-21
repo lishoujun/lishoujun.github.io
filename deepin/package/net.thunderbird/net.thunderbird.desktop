@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=雷鸟邮件
 Version=1.0
-Exec=/opt/apps/net.thunderbird/thunderbird
+Exec=/opt/apps/net.thunderbird/files/thunderbird
 Comment=Thunderbird
-Icon=/opt/apps/net.thunderbird/chrome/icons/default/default128.png
+Icon=/opt/apps/net.thunderbird/files/chrome/icons/default/default128.png
 Type=Application
 Terminal=false
 StartupNotify=true
