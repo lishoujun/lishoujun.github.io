@@ -13,7 +13,7 @@ mkdir -p tmp/${packageName}
 mkdir -p tmp/output
 mkdir -p tmp/source
 cd ${currentPath}/tmp/source
-wget ${URL}
+wget -nv ${URL}
 
 tar xvf ${shortname}-${VERSION}.tar.bz2
 installed_size=$((`du --max-depth=0 thunderbird|awk '{print $1}'`))
