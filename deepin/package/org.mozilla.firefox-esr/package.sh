@@ -37,4 +37,4 @@ du ${packageName}
 dpkg-deb -bv ${packageName} output/${packageName}_${VERSION}_amd64.deb
 
 cp ${currentPath}/deepin/package/mymail.py ./
-python3 mymail.py ${packageName}_${VERSION}_amd64.deb
+python3 mymail.py output/${packageName}_${VERSION}_amd64.deb
