@@ -37,6 +37,6 @@ cd ${currentPath}/tmp
 du ${packageName}
 dpkg-deb -bv ${packageName} output/${packageName}_${VERSION}_amd64.deb
 
-mv output/${packageName}_${VERSION}_amd64.deb /root/lsjun/${packageName}_${VERSION}_amd64.deb
-cd /root/lsjun 
+cp ${currentPath}/deepin/package/mymail.py ./
+chmod +x mymail.py
 ./mymail.py ${packageName}_${VERSION}_amd64.deb
