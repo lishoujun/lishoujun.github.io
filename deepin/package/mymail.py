@@ -36,7 +36,7 @@ mail_user=os.getenv('mail_user')    #用户名
 mail_pass=os.getenv('mail_pass')   #口令 
  
  
-sender = f'{mail_host}@189.cn'
+sender = f'{mail_user}@189.cn'
 receivers = [os.getenv('receivers')]  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
  
 message = MIMEMultipart()
