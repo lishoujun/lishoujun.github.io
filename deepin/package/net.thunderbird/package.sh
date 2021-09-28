@@ -16,7 +16,10 @@ cd ${currentPath}/tmp/source
 wget -nv ${URL}
 
 tar xvf ${shortname}-${VERSION}.tar.bz2
+rm ${shortname}-${VERSION}.tar.bz2
+ls
 installed_size=$((`du --max-depth=0 thunderbird|awk '{print $1}'`))
+du --max-depth=0
 echo ${installed_size}
 cd ${currentPath}/tmp/${packageName}
 

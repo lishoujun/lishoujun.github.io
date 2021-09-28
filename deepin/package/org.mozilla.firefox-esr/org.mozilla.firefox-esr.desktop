@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=火狐浏览器ESR
 Version=@version@
-Exec=/opt/apps/org.mozilla.firefox-esr/firefox
+Exec=/opt/apps/org.mozilla.firefox-esr/files/firefox
 Comment=firefox
-Icon=/opt/apps/org.mozilla.firefox-esr/browser/chrome/icons/default/default128.png
+Icon=/opt/apps/org.mozilla.firefox-esr/files/browser/chrome/icons/default/default128.png
 Type=Application
 Terminal=false
 StartupNotify=true
