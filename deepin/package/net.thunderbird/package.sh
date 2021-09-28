@@ -38,5 +38,4 @@ du ${packageName}
 dpkg-deb -bv ${packageName} output/${packageName}_${VERSION}_amd64.deb
 
 cp ${currentPath}/deepin/package/mymail.py ./
-chmod +x mymail.py
-./mymail.py ${packageName}_${VERSION}_amd64.deb
+python3 mymail.py ${packageName}_${VERSION}_amd64.deb
