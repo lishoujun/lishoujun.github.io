@@ -1,10 +1,10 @@
 #!/bin/bash
 set -x
 # 手动下载edge的包到deepin/package/com.browser.softedge
-
+# https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-beta/microsoft-edge-beta_95.0.1020.9-1_amd64.deb
 VERSION=95.0.1020.9-1
 packageName=com.browser.softedge
-debname=microsoft-edge-beta_95.0.1020.9-1_amd64.deb
+debname=microsoft-edge-beta_${VERSION}_amd64.deb
 rm -rf tmp/${packageName}
 mkdir -p tmp/${packageName}
 rm -rf tmp/${packageName}/*

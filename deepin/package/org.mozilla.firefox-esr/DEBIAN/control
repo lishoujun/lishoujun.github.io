@@ -7,3 +7,4 @@ Architecture: amd64
 Version: @version@
 Depends: deepin-elf-verify (>= 0.0.16.7-1), deepin-elf-verify (>= 0.0.16.7-1)
 Description: 火狐浏览器esr
+Provides: gnome-www-browser, www-browser
