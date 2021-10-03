@@ -1,3 +1,19 @@
+#!/bin/bash
+set -x
+# 手动下载edge的包到deepin/package/com.browser.softedge
+
+VERSION=95.0.1020.9-1
+packageName=com.browser.softedge
+debname=microsoft-edge-beta_95.0.1020.9-1_amd64.deb
+rm -rf tmp/${packageName}
+mkdir -p tmp/${packageName}
+rm -rf tmp/${packageName}/*
+cp deepin/package/com.browser.softedge/${debname} tmp/${packageName}
+cd tmp/${packageName}
+dpkg -x ${debname} .
+dpkg -e ${debname}
+rm ${debname}
+
 rm DEBIAN/postinst DEBIAN/postrm DEBIAN/prerm
 sed -i 's/microsoft-edge-beta/com.browser.softedge/' DEBIAN/control
 
@@ -42,8 +58,7 @@ cp opt/apps/com.browser.softedge/files/microsoft/msedge-beta/product_logo_${imgs
 mkdir -p opt/apps/com.browser.softedge/entries/icons/hicolor/scalable/apps
 cp opt/apps/com.browser.softedge/files/microsoft/msedge-beta/product_logo_${imgsize}_beta.png opt/apps/com.browser.softedge/entries/icons/hicolor/scalable/apps/com.browser.softedge.png
 
-VERSION=94.0.992.31-1
-packageName=com.browser.softedge
+
 cat > info <<EOF 
 {
     "appid": "com.browser.softedge", 
