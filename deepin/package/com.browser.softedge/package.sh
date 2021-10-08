@@ -2,14 +2,19 @@
 set -x
 # 手动下载edge的包到deepin/package/com.browser.softedge
 # https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-beta/microsoft-edge-beta_95.0.1020.9-1_amd64.deb
-VERSION=95.0.1020.9-1
+VERSION=95.0.1020.14-1
 packageName=com.browser.softedge
 debname=microsoft-edge-beta_${VERSION}_amd64.deb
+
+currentPath=`pwd`
+
 rm -rf tmp/${packageName}
 mkdir -p tmp/${packageName}
+mkdir -p tmp/output
 rm -rf tmp/${packageName}/*
-cp deepin/package/com.browser.softedge/${debname} tmp/${packageName}
+# cp deepin/package/com.browser.softedge/${debname} tmp/${packageName}
 cd tmp/${packageName}
+wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-beta/${debname}
 dpkg -x ${debname} .
 dpkg -e ${debname}
 rm ${debname}
@@ -83,4 +88,7 @@ EOF
 mv info opt/apps/com.browser.softedge/
 
 cd ..
-dpkg-deb -bv ${packageName} ${packageName}_${VERSION}_amd64.deb
+dpkg-deb -bv ${packageName} output/${packageName}_${VERSION}_amd64.deb
+
+cp ${currentPath}/deepin/package/mymail.py ./
+python3 mymail.py output/${packageName}_${VERSION}_amd64.deb
