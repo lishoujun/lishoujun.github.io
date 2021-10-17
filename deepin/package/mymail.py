@@ -18,7 +18,7 @@ secret_key = os.getenv('secret_key')
 # 构建鉴权对象
 q = Auth(access_key, secret_key)
 # 要上传的空间
-bucket_name = 'haoteyi'
+bucket_name = 'yyyit-hd'
 # 上传后保存的文件名
 key = package_name
 # 生成上传 Token，可以指定过期时间等
@@ -46,7 +46,7 @@ subject = f'deepin 软件包 {package_name} '
 message['Subject'] = Header(subject, 'utf-8')
 
 # 邮件正文内容
-message.attach(MIMEText('http://qiniu.yyyit.com/' +
+message.attach(MIMEText('http://cdn.download.yyyit.com/' +
                package_name, 'plain', 'utf-8'))
 
 
