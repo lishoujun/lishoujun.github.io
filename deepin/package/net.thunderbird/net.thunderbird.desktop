@@ -1,5 +1,6 @@
 [Desktop Entry]
-Name=雷鸟邮件
+Name=Thunderbird
+Name[zh_CN]=雷鸟邮件
 Version=1.0
 Exec=/opt/apps/net.thunderbird/files/thunderbird
 Comment=Thunderbird
