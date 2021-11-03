@@ -6,6 +6,6 @@ cd debinstall
 rm -rf *.deb
 echo $0
 echo $1
-url=http://cdn.download.yyyit.com/output/com.browser.softedge_95.0.1020.40-1_amd64.deb
-wget -O tmp.deb ${url}
+url=http://cdn.download.yyyit.com/output/org.mozilla.firefox-esr_91.3.0esr_amd64.deb
+wget -q -O tmp.deb ${url}
 sudo dpkg -i tmp.deb
