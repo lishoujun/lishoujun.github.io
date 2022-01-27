@@ -45,9 +45,10 @@ message['To'] = Header("李守俊", 'utf-8')
 subject = f'deepin 软件包 {package_name} '
 message['Subject'] = Header(subject, 'utf-8')
 
+content = 'http://cdn.download.yyyit.com/' + package_name
+print(content)
 # 邮件正文内容
-message.attach(MIMEText('http://cdn.download.yyyit.com/' +
-               package_name, 'plain', 'utf-8'))
+message.attach(MIMEText(content, 'plain', 'utf-8'))
 
 
 try:
