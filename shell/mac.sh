@@ -3,10 +3,13 @@
 
 # tuna mirror help
 # https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/
-# update firest
+# update first
 brew update
-## openconnect for vpn
-brew install openconnect
-# how to use: sudo openconnect vpn.xxx.com
+
 git clone https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask --depth=1
-brew install quicksilver yed postman wechat miniconda brave-browser android-platform-tools
+# 常用软件  
+brew install yed postman wechat miniconda android-platform-tools
+# 安装 go 运行环境
+brew install go 
+# 安装greadlink
+brew install coreutils

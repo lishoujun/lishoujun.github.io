@@ -1,4 +1,6 @@
 # Timeline
+- 202106-now  
+  [contribute to deepin,package Firefox-ESR and Thunderbird](https://bbs.deepin.org/mine/post)
 - 201810  
   [contribute to fdroid app peertube-android](https://github.com/sschueller/peertube-android/commits?author=lishoujun)
 - 201810  
@@ -13,6 +15,10 @@
 - [Fedilab](https://framagit.org/tom79/fedilab) is a multifunctional Android client to access the distributed Fediverse, consisting of microblogging, photo sharing and video hosting
 - [Tachiyomi](https://github.com/inorichi/tachiyomi) is a free and open source manga reader for Android 5.0 and above.
 - [deepin](https://www.deepin.org/zh/)  base中国的linux发行版
+- [Firefox-esr](https://www.mozilla.org/zh-CN/firefox/enterprise/)  我最推荐的浏览器，没有之一
+- [Thunderbird](https://www.thunderbird.net/zh-CN/)  我最推荐的邮件客户端，亦没有之一
+
+
 
 <script src="https://liberapay.com/lishoujun/widgets/button.js"></script>
 <noscript><a href="https://liberapay.com/lishoujun/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
