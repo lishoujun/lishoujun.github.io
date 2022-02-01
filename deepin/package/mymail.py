@@ -46,6 +46,7 @@ subject = f'deepin 软件包 {package_name} '
 message['Subject'] = Header(subject, 'utf-8')
 
 content = 'http://cdn.download.yyyit.com/' + package_name
+content = f'你好，这是最新的{package_name}包 请查收\n\n {content} \n\n祝好！\n李笑石'
 print(content)
 # 邮件正文内容
 message.attach(MIMEText(content, 'plain', 'utf-8'))
