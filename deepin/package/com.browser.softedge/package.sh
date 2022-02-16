@@ -2,7 +2,7 @@
 set -x
 # 手动下载edge的包到deepin/package/com.browser.softedge
 # https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-beta/microsoft-edge-beta_95.0.1020.9-1_amd64.deb
-VERSION=95.0.1020.40-1
+VERSION=99.0.1150.16-1
 packageName=com.browser.softedge
 debname=microsoft-edge-beta_${VERSION}_amd64.deb
 
