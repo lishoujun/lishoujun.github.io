@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Name=SeaMonkey
-Exec=seamonkey
+Exec=/opt/apps/org.seamonkey-project.seamonkey/files/seamonkey
 Terminal=false
 Icon=seamonkey
 Type=Application
