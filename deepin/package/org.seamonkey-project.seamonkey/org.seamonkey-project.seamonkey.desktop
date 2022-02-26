@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=SeaMonkey
+Exec=seamonkey
+Terminal=false
+Icon=seamonkey
+Type=Application
+Categories=Development;
