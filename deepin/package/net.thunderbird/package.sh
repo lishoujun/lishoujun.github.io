@@ -31,10 +31,7 @@ cp -r ${currentPath}/deepin/package/${packageName}/DEBIAN ./
 sed -i "s/Installed-Size:.*/Installed-Size: ${installed_size}/" DEBIAN/control
 sed -i "s/Version:.*/Version: ${VERSION}/" DEBIAN/control
 
-# 图标
-mkdir -p usr/share/applications
-cp -r ${currentPath}/deepin/package/${packageName}/${packageName}.desktop ./usr/share/applications/
-sed -i "s/Version=.*/Version=${VERSION}/" ./usr/share/applications/*
+source ${currentPath}/deepin/package/org.mozilla.common/common.sh
 
 cd ${currentPath}/tmp
 du ${packageName}
