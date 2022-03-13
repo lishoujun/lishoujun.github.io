@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 import os
 import smtplib
 import sys
@@ -12,37 +11,40 @@ from qiniu import Auth, BucketManager, etag, put_file
 
 package_name = sys.argv[1]
 
-# 需要填写你的 Access Key 和 Secret Key
+# 从环境变量中获取 Access Key 、 Secret Key 和 bucket_name（要上传的空间）
 access_key = os.getenv('access_key')
 secret_key = os.getenv('secret_key')
-# 构建鉴权对象
-q = Auth(access_key, secret_key)
-# 要上传的空间
-bucket_name = 'yyyit-hd'
-# 上传后保存的文件名
-key = package_name
+bucket_name = os.getenv('bucket_name', 'yyyit-hd')
+# 鉴权
+myauth = Auth(access_key, secret_key)
 
 
-def delete_file(q: Auth, bucket_name: str, key: str):
-    # 因为可能文件之前存在过，所以提前删除一下。
+def delete_file(myauth: Auth, bucket_name: str, key: str):
     # 初始化BucketManager
-    bucket = BucketManager(q)
-# 删除bucket_name 中的文件 key
+    bucket = BucketManager(myauth)
+    # 删除bucket_name 中的文件 key
     ret, info = bucket.delete(bucket_name, key)
     print(info)
     print(ret)
 
 
-delete_file(q, bucket_name, key)
+def upload_file(myauth: Auth, bucket_name: str, key: str):
+    # 生成上传 Token，可以指定过期时间等
+    token = myauth.upload_token(bucket_name, key, 600)
+    # 要上传文件的本地路径
+    localfile = './' + key
+    ret, info = put_file(token, key, localfile, version='v2')
+    print(info)
+    assert ret['key'] == key
+    assert ret['hash'] == etag(localfile)
 
-# 生成上传 Token，可以指定过期时间等
-token = q.upload_token(bucket_name, key, 600)
-# 要上传文件的本地路径
-localfile = './' + package_name
-ret, info = put_file(token, key, localfile, version='v2')
-print(info)
-assert ret['key'] == key
-assert ret['hash'] == etag(localfile)
+
+def delete_then_upload(myauth: Auth, bucket_name: str, key: str):
+    # 因为可能文件之前存在过，所以提前删除一下。
+    delete_file(myauth, bucket_name, key)
+    upload_file(myauth, bucket_name, key)
+
+delete_then_upload(myauth, bucket_name, package_name)
 
 # 第三方 SMTP 服务
 mail_host = "smtp.189.cn"  # 设置服务器
