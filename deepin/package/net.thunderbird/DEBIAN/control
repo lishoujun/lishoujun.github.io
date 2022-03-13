@@ -7,7 +7,7 @@ Source: mozilla
 Homepage: https://www.thunderbird.net
 Architecture: amd64
 Priority: optional
-Depends: debianutils (>=1.16), libxext6
+Depends: debianutils (>=1.16), libxext6, libdbus-glib-1-2 (>= 0.78) 
 Description: mail/news client with RSS, chat and integrated spam filter support
  mail/news client with RSS, chat and integrated spam filter support
   Thunderbird is an mail client suitable for free distribution. The goal of
