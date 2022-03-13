@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
+import os
 import smtplib
 import sys
-import os
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 from email.header import Header
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
-from qiniu import Auth, put_file, etag
 import qiniu.config
+from qiniu import Auth, BucketManager, etag, put_file
 
 package_name = sys.argv[1]
 
@@ -21,8 +21,22 @@ q = Auth(access_key, secret_key)
 bucket_name = 'yyyit-hd'
 # 上传后保存的文件名
 key = package_name
+
+
+def delete_file(q: Auth, bucket_name: str, key: str):
+    # 因为可能文件之前存在过，所以提前删除一下。
+    # 初始化BucketManager
+    bucket = BucketManager(q)
+# 删除bucket_name 中的文件 key
+    ret, info = bucket.delete(bucket_name, key)
+    print(info)
+    print(ret)
+
+
+delete_file(q, bucket_name, key)
+
 # 生成上传 Token，可以指定过期时间等
-token = q.upload_token(bucket_name, key, 3600)
+token = q.upload_token(bucket_name, key, 600)
 # 要上传文件的本地路径
 localfile = './' + package_name
 ret, info = put_file(token, key, localfile, version='v2')
