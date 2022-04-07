@@ -1,7 +1,7 @@
 set -x
 packageName=net.thunderbird
 shortname=thunderbird
-VERSION=91.7.0
+VERSION=91.8.0
 URL=https://download-installer.cdn.mozilla.net/pub/${shortname}/releases/${VERSION}/linux-x86_64/zh-CN/${shortname}-${VERSION}.tar.bz2
 
 currentPath=`pwd`
