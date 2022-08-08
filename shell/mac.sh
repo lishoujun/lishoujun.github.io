@@ -13,3 +13,5 @@ brew install yed postman wechat miniconda android-platform-tools
 brew install go 
 # 安装greadlink
 brew install coreutils
+
+curl https://sh.rustup.rs -sSf | sh
