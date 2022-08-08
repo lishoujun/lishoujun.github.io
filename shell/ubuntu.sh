@@ -9,4 +9,6 @@ sudo apt install shadowsocks-libev
 # sudo openconnect  vpn.xxx.com -u xiaoming --authgroup=RSA
 # sudo vim /etc/shadowsocks-libev/config.json
 sudo systemctl enable shadowsocks-libev-local@.service
+
+curl https://sh.rustup.rs -sSf | sh
 date
