@@ -1,7 +1,7 @@
 set -x
 packageName=org.mozilla.firefox-esr
 shortname=firefox
-VERSION=102.2.0esr
+VERSION=102.3.0esr
 URL=https://download-installer.cdn.mozilla.net/pub/${shortname}/releases/${VERSION}/linux-x86_64/zh-CN/${shortname}-${VERSION}.tar.bz2
 
 currentPath=`pwd`
