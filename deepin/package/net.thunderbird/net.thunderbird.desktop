@@ -10,3 +10,4 @@ Terminal=false
 StartupNotify=true
 Encoding=UTF-8
 Categories=Network;Email;
+MimeType=message/rfc822;x-scheme-handler/mailto;text/calendar;text/x-vcard;
