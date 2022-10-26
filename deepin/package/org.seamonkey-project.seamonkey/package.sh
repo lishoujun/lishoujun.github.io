@@ -1,7 +1,7 @@
 set -x
 packageName=org.seamonkey-project.seamonkey
 shortname=seamonkey
-VERSION=2.53.13
+VERSION=2.53.14
 URL=https://download-installer.cdn.mozilla.net/pub/${shortname}/releases/${VERSION}/linux-x86_64/zh-CN/${shortname}-${VERSION}.zh-CN.linux-x86_64.tar.bz2
 
 currentPath=`pwd`
