@@ -15,7 +15,7 @@ mkdir -p tmp/source
 cd ${currentPath}/tmp/source
 wget -nv ${URL}
 
-tar xvf ${shortname}-${VERSION}.tar.bz2
+tar xf ${shortname}-${VERSION}.tar.bz2
 rm ${shortname}-${VERSION}.tar.bz2
 ls
 installed_size=$((`du --max-depth=0 thunderbird|awk '{print $1}'`))
@@ -35,7 +35,7 @@ source ${currentPath}/deepin/package/org.mozilla.common/common.sh
 
 cd ${currentPath}/tmp
 du ${packageName}
-dpkg-deb -bv ${packageName} output/${packageName}_${VERSION}_amd64.deb
+dpkg-deb -b ${packageName} output/${packageName}_${VERSION}_amd64.deb
 
 cp ${currentPath}/deepin/package/mymail.py ./
 python3 mymail.py output/${packageName}_${VERSION}_amd64.deb
