@@ -16,9 +16,7 @@ echo ${currentPath}
 
 rm -rf ${currentPath}/tmp/*
 
-mkdir -p tmp/${packageName}
-mkdir -p tmp/output
-mkdir -p tmp/source
+mkdir -p tmp/{${packageName},output,source}
 cd ${currentPath}/tmp/source
 wget -nv ${URL}
 
