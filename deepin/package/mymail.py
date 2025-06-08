@@ -14,7 +14,7 @@ package_name = sys.argv[1]
 # 从环境变量中获取 Access Key 、 Secret Key 和 bucket_name（要上传的空间）
 access_key = os.getenv('access_key')
 secret_key = os.getenv('secret_key')
-bucket_name = os.getenv('bucket_name', 'yyyit-hd')
+bucket_name = os.getenv('bucket_name', 'yyyit-forhk')
 # 鉴权
 myauth = Auth(access_key, secret_key)
 
