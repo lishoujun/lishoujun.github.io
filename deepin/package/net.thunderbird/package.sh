@@ -1,7 +1,9 @@
 set -x
 packageName=net.thunderbird
 shortname=thunderbird
-VERSION=139.0.1
+# VERSION=139.0.1
+VERSION=128.11.1esr
+
 # 判断版本号，135及以上用tar.xz，否则用tar.bz2
 ver_major=${VERSION%%.*}
 if [ "$ver_major" -ge 135 ]; then
