@@ -4,7 +4,14 @@ shortname=firefox
 # VERSION=128.12.0esr
 VERSION=140.0esr
 
-URL=https://download-installer.cdn.mozilla.net/pub/${shortname}/releases/${VERSION}/linux-x86_64/zh-CN/${shortname}-${VERSION}.tar.bz2
+# 判断版本号，135及以上用tar.xz，否则用tar.bz2
+ver_major=${VERSION%%.*}
+if [ "$ver_major" -ge 135 ]; then
+    ARCHIVE_EXT="tar.xz"
+else
+    ARCHIVE_EXT="tar.bz2"
+fi
+URL=https://download-installer.cdn.mozilla.net/pub/${shortname}/releases/${VERSION}/linux-x86_64/zh-CN/${shortname}-${VERSION}.${ARCHIVE_EXT}
 
 currentPath=`pwd`
 echo ${currentPath}
@@ -17,8 +24,9 @@ mkdir -p tmp/source
 cd ${currentPath}/tmp/source
 wget -nv ${URL}
 
-tar xvf ${shortname}-${VERSION}.tar.bz2
-rm ${shortname}-${VERSION}.tar.bz2
+# 解压
+tar xf ${shortname}-${VERSION}.${ARCHIVE_EXT}
+rm ${shortname}-${VERSION}.${ARCHIVE_EXT}
 ls
 installed_size=$((`du --max-depth=0 firefox|awk '{print $1}'`))
 du --max-depth=0
