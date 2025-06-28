@@ -2,7 +2,7 @@ set -x
 packageName=org.mozilla.firefox-esr
 shortname=firefox
 # VERSION=128.12.0esr
-VERSION=140.0.0esr
+VERSION=140.0esr
 
 URL=https://download-installer.cdn.mozilla.net/pub/${shortname}/releases/${VERSION}/linux-x86_64/zh-CN/${shortname}-${VERSION}.tar.bz2
 
