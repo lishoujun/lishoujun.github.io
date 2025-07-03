@@ -1,0 +1,24 @@
+#cloud-config
+# Update package lists (runs before packages)
+package_update: true
+package_upgrade: true
+
+# Write backports repository configuration
+write_files:
+  - path: /etc/apt/sources.list.d/bookworm-backports.list
+    content: |
+      deb http://deb.debian.org/debian bookworm-backports main
+    permissions: '0644'
+
+# Install the latest kernel from backports
+packages:
+  # - linux-image-amd64/bookworm-backports
+  # - linux-headers-amd64/bookworm-backports
+  - nginx
+
+
+# Schedule a reboot 10 minutes after cloud-init completes
+power_state:
+  delay: "now"
+  message: The server will reboot in ten minutes to apply the new kernel.
+  mode: reboot
