@@ -2,7 +2,7 @@ set -x
 packageName=net.thunderbird
 shortname=thunderbird
 # VERSION=139.0.2
-VERSION=140.0.1esr
+VERSION=140.1.1esr
 
 # 判断版本号，135及以上用tar.xz，否则用tar.bz2
 ver_major=${VERSION%%.*}
