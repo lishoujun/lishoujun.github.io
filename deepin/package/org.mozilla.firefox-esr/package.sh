@@ -2,7 +2,7 @@ set -x
 packageName=org.mozilla.firefox-esr
 shortname=firefox
 # VERSION=128.12.0esr
-VERSION=140.6.0esr
+VERSION=140.8.0esr
 
 # 判断版本号，135及以上用tar.xz，否则用tar.bz2
 ver_major=${VERSION%%.*}
