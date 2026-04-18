@@ -2,7 +2,7 @@
 
 ## Workflow preference for this repository
 
-- Default language for responses: Chinese.
+- Default language for responses: English.
 - Before the first code edit in each task, run `git pull` on the current working branch.
 
 ## Cursor Cloud specific instructions
